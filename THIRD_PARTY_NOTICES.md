@@ -1,20 +1,24 @@
-# Лицензии сторонних компонентов и указание авторства
+# Third-party notices
 
-**Лицензия MIT, расположенная в корневом каталоге репозитория, распространяется только на оригинальные материалы, созданные FMP**, и не заменяет собой лицензии, относящиеся к стороннему коду.
+The root MIT LICENSE covers only independently authored FMP project materials.
+It does not relicense upstream projects or their derivatives.
 
 ## SkullCreator / SkullCreatorAPI
 
-- Исходный проект: [SkullCreator](https://github.com/nicholasveronico/SkullCreator) (автор: diamondpixel).
-- Лицензия исходного проекта: **MIT**. Текст лицензии приведен в файле [`SkullCreatorAPI-3.2.0/LICENSE`](SkullCreatorAPI-3.2.0/LICENSE).
-- Входящий в состав репозитория файл `SkullCreatorAPI-3.2.0-SkiF4er.jar` содержит измененный класс `TexturePropertyWriter`, автором которого является SkiF4er. Данный проект не является официальным дистрибутивом оригинального проекта.
-- При распространении модифицированного бинарного файла необходимо сохранить уведомление об авторских правах и условиях лицензии MIT.
+- Original project: https://github.com/nicholasveronico/SkullCreator (original author: diamondpixel).
+- Upstream license: MIT; original copyright and text reproduced in
+  [`SkullCreatorAPI-3.2.0/LICENSE.txt`](SkullCreatorAPI-3.2.0/LICENSE.txt).
+- Modified binary: `SkullCreatorAPI-3.2.0/SkullCreatorAPI-3.2.0-SkiF4er.jar`.
+- Modification: `TexturePropertyWriter` compatibility fix by SkiF4er.
 
 ## ExcellentCrates
 
-- Оригинальный проект: [ExcellentCrates](https://modrinth.com/plugin/excellentcrates/version/iZVIXY6R), автор: NightExpress.
-- Лицензия исходного проекта: **GPL-3.0**. Текст лицензии приведен в файле [`ExcellentCrates-6.6.1/LICENSE`](ExcellentCrates-6.6.1/LICENSE).
-- Опубликованный артефакт версии 6.6.1 помечен на платформе Modrinth лицензией **GPL-3.0-only**.
-- При распространении модифицированного бинарного файла необходимо сохранить уведомление об авторских правах и условиях лицензии GPL-3.0.
+- Original project: https://github.com/nulli0n/ExcellentCrates-spigot (NightExpress).
+- Upstream license: GNU GPL v3; license text in
+  [`ExcellentCrates-6.6.1/LICENSE`](ExcellentCrates-6.6.1/LICENSE).
+- Supplied materials: modified Java file and patch, **no modified JAR**.
+- Upstream reference and patch provenance: [`ExcellentCrates-6.6.1/UPSTREAM.txt`](ExcellentCrates-6.6.1/UPSTREAM.txt).
+- Modification: 2026-06-07, SkiF4er, PacketEvents hologram velocity vector.
 
-
-Лицензия MIT, применяемая к материалам FMP, не предоставляет никаких прав в отношении стороннего кода.
+An amended ExcellentCrates JAR must not be added to this repository without
+corresponding source and compliance with the GPL conditions applicable to the binary.

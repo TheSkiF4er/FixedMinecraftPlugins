@@ -1,35 +1,20 @@
 # SkullCreatorAPI 3.2.0 — SkiF4er Custom Heads Fix
 
-Автор исправления: **SkiF4er**
+**Статус:** модифицированный JAR доступен; сохранена лицензия оригинального MIT-проекта.
 
-## Назначение
+Исправление ориентировано на совместимость `PlayerProfile` / `PlayerTextures`
+в новых версиях Minecraft/Paper, включая 1.21.9+.
 
-Фикс предназначен для сценариев, где кастомные головы / skull textures ломаются на новых версиях Minecraft/Paper 1.21.9+ / 1.21.11 из-за несовместимости путей записи texture properties, включая ошибки вокруг `GameProfile#getProperties`.
-
-## Что изменено
-
-Изменён класс:
-
-```text
-com/skullcreator/internal/util/TexturePropertyWriter.class
-```
-
-Добавлена более безопасная логика применения текстуры:
-
-1. Приоритетно используется Bukkit `PlayerProfile` / `PlayerTextures`.
-2. Поддержаны варианты `setSkin(URL)` и `setSkin(URL, SkinModel)`.
-3. Добавлен безопасный fallback для `setProperty("textures", base64)`.
-4. Добавлен fallback для Authlib `PropertyMap` без жёсткой бинарной зависимости от `GameProfile#getProperties`.
-5. Ошибка применения текстуры не должна валить плагин, использующий API.
+Изменён класс `com/skullcreator/internal/util/TexturePropertyWriter.class`.
+Обновлённая реализация использует профиль Bukkit и резервные механизмы установки текстуры
+без безусловного обращения к `GameProfile#getProperties`.
 
 ## Установка
 
-1. Сделайте резервную копию старого `SkullCreatorAPI-3.2.0.jar`.
-2. Остановите сервер.
-3. Замените jar на `SkullCreatorAPI-3.2.0-SkiF4er-CustomHeadsFix.jar`.
-4. Запустите сервер.
-5. Проверьте меню, GUI, кейсы, профили и другие места, где используются кастомные головы.
+1. Остановите сервер и создайте резервную копию предыдущего плагина.
+2. Поместите `SkullCreatorAPI-3.2.0-SkiF4er.jar` в каталог `plugins/` сервера.
+3. Запустите сервер и проверьте кастомные головы в GUI, меню и других сценариях.
 
-## Важно
-
-Фикс предназначен для конкретной версии `SkullCreatorAPI 3.2.0`. Перед установкой на production рекомендуется проверка на тестовом сервере.
+Сверьте SHA-256 по [`SHA256SUMS.txt`](SHA256SUMS.txt). Исходная лицензия —
+[`LICENSE.txt`](LICENSE.txt). Это неофициальная модификация, автор исправления SkiF4er.
+Тесты на действующем Paper-сервере не выполнялись при подготовке пакета.

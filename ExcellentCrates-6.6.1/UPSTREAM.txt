@@ -1,0 +1,13 @@
+Upstream: https://github.com/nulli0n/ExcellentCrates-spigot
+Revision checked for the hologram fix: d9ba2393a5dc812368379acc907f61a34aabb7bb
+Source file: src/main/java/su/nightexpress/excellentcrates/hologram/handler/HologramPacketsHandler.java
+Upstream source blob SHA-1: d42288ce2da9ce82450454057432d8804b26f029
+License: GPL-3.0 (verify exact applicable upstream terms for each binary)
+FMP modification: 2026-06-07 — prevent null PacketEvents entity velocity.
+Original input modified JAR SHA-256 (not distributed here): 6af9eea7bc6353b4ae6527e76d99bedb6a889b79985c6a8091788cd409b7c002
+
+This repository currently distributes only a modified source file, patch, and its
+attributions — NOT the modified GPL binary or the complete corresponding source.
+The full upstream source must be retrieved and the patch applied to reconstruct
+that version of the source tree. A build of the patched source has NOT been
+shown to reproduce the original input binary byte-for-byte.
