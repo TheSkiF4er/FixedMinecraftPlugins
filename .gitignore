@@ -1,0 +1,13 @@
+# Do not accidentally publish arbitrary plugin binaries.
+*.jar
+!plugins/SkullCreatorAPI-3.2.0/SkullCreatorAPI-3.2.0-SkiF4er.jar
+*.zip
+*.7z
+*.rar
+*.log
+.env
+.env.*
+!.env.example
+.idea/
+.vscode/
+__pycache__/

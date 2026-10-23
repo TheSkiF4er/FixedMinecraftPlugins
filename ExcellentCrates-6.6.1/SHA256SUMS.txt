@@ -1,0 +1,2 @@
+7ce3377f9f214c629fb4bf15fb2d5a617a4c4fa6d4988c209324a9867e2965fb  ExcellentCrates-6.6.1.jar.original
+6af9eea7bc6353b4ae6527e76d99bedb6a889b79985c6a8091788cd409b7c002  ExcellentCrates-6.6.1-SkiF4er-HologramVectorFix.jar
