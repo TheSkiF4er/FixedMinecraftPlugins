@@ -1,34 +1,31 @@
 # ExcellentCrates 6.6.1 — Hologram Vector Fix
 
-**Статус:** опубликованы исходный файл и патч, а также изменённый JAR.
+**Статус:** неофициальная модификация; в каталоге находятся изменённый JAR,
+изменённый Java-файл и патч.
 
 ## Исправление
 
-Ошибка при создании hologram entity в PacketEvents могла приводить к сообщению
-`Cannot read field "x" because "vector" is null` / `Failed to encode packet 'clientbound/minecraft:add_entity'`.
+Ошибка при создании hologram entity в PacketEvents могла приводить к сообщениям
+`Cannot read field "x" because "vector" is null` и
+`Failed to encode packet 'clientbound/minecraft:add_entity'`.
 
-В `HologramPacketsHandler.java` аргумент velocity для `WrapperPlayServerSpawnEntity`
-заменён с `null` на `new Vector3d(0.0D, 0.0D, 0.0D)`.
+В `HologramPacketsHandler.java` вместо отсутствующего вектора скорости (`null`)
+в `WrapperPlayServerSpawnEntity` передаётся `new Vector3d(0.0D, 0.0D, 0.0D)`.
 
-- Исправленный Java-файл: [`src/main/java/.../HologramPacketsHandler.java`](src/main/java/su/nightexpress/excellentcrates/hologram/handler/HologramPacketsHandler.java)
-- Патч: [`patches/hologram-vector-fix.patch`](patches/hologram-vector-fix.patch)
-- Исходная версия и контрольные значения: [`UPSTREAM.txt`](UPSTREAM.txt)
+## Файлы
+
+- Исправленный JAR: [`ExcellentCrates-6.6.1-SkiF4er.jar`](ExcellentCrates-6.6.1-SkiF4er.jar)
+- SHA-256: [`SHA256SUMS.txt`](SHA256SUMS.txt)
+- Изменённый Java-файл: [`HologramPacketsHandler.java`](src/main/java/su/nightexpress/excellentcrates/hologram/handler/HologramPacketsHandler.java)
+- Патч изменений: [`hologram-vector-fix.patch`](patches/hologram-vector-fix.patch)
 - Лицензия: [`LICENSE`](LICENSE) — GNU GPL v3
 
-## Воссоздание полного дерева исходников
+## Авторство и условия распространения
 
-В корне публичного репозитория запустите:
+Исходный проект: [NightExpress / ExcellentCrates](https://github.com/nulli0n/ExcellentCrates-spigot).
+Исправление: SkiF4er, 2026-06-07. Это неофициальная версия.
 
-```bash
-bash scripts/reconstruct-excellentcrates.sh
-```
-
-Потребуется `git` и доступ к GitHub. Скрипт скачивает зафиксированный upstream-коммит,
-проверяет исходный файл и применяет патч. Результат — каталог
-`build/excellentcrates-6.6.1-source/`, а не готовый JAR. Для сборки необходимы
-Java 21, Maven и доступные зависимости, указанные в upstream `pom.xml`.
-
-## Авторство и публикация бинарника
-
-Upstream: NightExpress / ExcellentCrates. Исправление: SkiF4er, 2026-06-07.
-Код ExcellentCrates и производные модификации регулируются GPL, а не корневой MIT.
+Исправленный JAR является производным от GPL-3.0-проекта. Если он
+распространяется, необходимо выполнить требования GPL к соответствующему
+исходному коду и остальные применимые условия. Приведённые в каталоге
+отдельный Java-файл и патч не заменяют полный соответствующий исходный код.

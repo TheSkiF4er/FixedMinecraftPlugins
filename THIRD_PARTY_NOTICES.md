@@ -1,23 +1,28 @@
 # Уведомления о сторонних компонентах
 
-Основная лицензия (MIT LICENSE) распространяется только на материалы проекта FMP, созданные его авторами независимо.
-Она не изменяет условия лицензирования сторонних (исходных) проектов или их производных версий.
+Корневая лицензия MIT распространяется только на собственные материалы FMP;
+она не заменяет лицензии сторонних проектов или их производных версий.
 
 ## SkullCreator / SkullCreatorAPI
 
 - Исходный проект: https://github.com/nicholasveronico/SkullCreator (автор: diamondpixel).
-- Лицензия исходного проекта: MIT; текст лицензии и информация об авторских правах приведены в файле
-  [`SkullCreatorAPI-3.2.0/LICENSE.txt`](SkullCreatorAPI-3.2.0/LICENSE.txt).
-- Измененный бинарный файл: `SkullCreatorAPI-3.2.0/SkullCreatorAPI-3.2.0-SkiF4er.jar`.
-- Внесенные изменения: исправление совместимости `TexturePropertyWriter` (автор: SkiF4er).
+- Лицензия оригинального проекта: MIT, см. [`SkullCreatorAPI-3.2.0/LICENSE`](SkullCreatorAPI-3.2.0/LICENSE).
+- Изменённый бинарный файл: [`SkullCreatorAPI-3.2.0/SkullCreatorAPI-3.2.0-SkiF4er.jar`](SkullCreatorAPI-3.2.0/SkullCreatorAPI-3.2.0-SkiF4er.jar).
+- Контрольная сумма: [`SkullCreatorAPI-3.2.0/SHA256SUMS.txt`](SkullCreatorAPI-3.2.0/SHA256SUMS.txt).
+- Модификация: совместимость `TexturePropertyWriter` (SkiF4er).
+- Формат: Java-библиотека, не автономный серверный плагин.
 
 ## ExcellentCrates
 
-- Исходный проект: https://github.com/nulli0n/ExcellentCrates-spigot (автор: NightExpress).
-- Лицензия исходного проекта: GNU GPL v3; текст лицензии находится в файле
-  [`ExcellentCrates-6.6.1/LICENSE`](ExcellentCrates-6.6.1/LICENSE).
-- Предоставленные материалы: измененный файл Java и патч; **измененный JAR-файл отсутствует**.
-- Ссылка на исходный проект и информация о патче: [`ExcellentCrates-6.6.1/UPSTREAM.txt`](ExcellentCrates-6.6.1/UPSTREAM.txt).
-- Внесенные изменения: 07.06.2026, SkiF4er — корректировка вектора скорости голограммы (используется PacketEvents).
+- Исходный проект: https://github.com/nulli0n/ExcellentCrates-spigot (NightExpress).
+- Лицензия оригинального проекта: GNU GPL v3, см. [`ExcellentCrates-6.6.1/LICENSE`](ExcellentCrates-6.6.1/LICENSE).
+- Изменённый бинарный файл: [`ExcellentCrates-6.6.1/ExcellentCrates-6.6.1-SkiF4er.jar`](ExcellentCrates-6.6.1/ExcellentCrates-6.6.1-SkiF4er.jar).
+- Контрольная сумма: [`ExcellentCrates-6.6.1/SHA256SUMS.txt`](ExcellentCrates-6.6.1/SHA256SUMS.txt).
+- Изменённый Java-файл: [`ExcellentCrates-6.6.1/src/main/java/su/nightexpress/excellentcrates/hologram/handler/HologramPacketsHandler.java`](ExcellentCrates-6.6.1/src/main/java/su/nightexpress/excellentcrates/hologram/handler/HologramPacketsHandler.java).
+- Патч: [`ExcellentCrates-6.6.1/patches/hologram-vector-fix.patch`](ExcellentCrates-6.6.1/patches/hologram-vector-fix.patch).
+- Модификация: 07.06.2026, SkiF4er — ненулевой вектор скорости голограммы PacketEvents.
 
-Добавление в данный репозиторий измененного JAR-файла ExcellentCrates допускается только при условии предоставления соответствующего исходного кода и соблюдения требований лицензии GPL, применимых к бинарному файлу.
+**Важно:** распространение изменённого ExcellentCrates JAR регулируется GPL-3.0.
+Один изменённый Java-файл и патч не заменяют предоставление соответствующего
+исходного кода в объёме, требуемом GPL. Наличие JAR в этом репозитории само по
+себе не доказывает соблюдение всех условий распространения.
